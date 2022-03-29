@@ -46,3 +46,16 @@ axios
         });
 
     });
+
+    axios
+    .get("https://api-tutor.herokuapp.com/v1/cars/make/:make")
+    .then(function (result) {
+        result.data.forEach(model => {
+            const li = document.createElement('tr');
+            li.innerHTML = `<tr>
+        <td>${model}<strong></strong></td></tr>`
+            carbrands.appendChild(li);
+
+        });
+
+    });
